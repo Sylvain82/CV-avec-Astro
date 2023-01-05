@@ -9,7 +9,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout>
+<BaseLayout title = "Sylvain Garrigues - Portfolio">
 
     <div>
       <div class="text-3xl w-full font-bold mb-2">{"Projets informatiques"}</div>

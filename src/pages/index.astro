@@ -9,15 +9,15 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout>
+<BaseLayout title = "Sylvain Garrigues - Home">
 
     <div class="pb-12 mt-5">
-      <div class="text-xl py-1">Bonjour 👋</div>
-      <div class="text-5xl font-bold">Je suis Sylvain Garrigues</div>
+      <div class="text-xl py-1">Site WEB</div>
+      <div class="text-5xl font-bold">Sylvain Garrigues</div>
       <div class="text-3xl py-3 font-bold">Technicien méthodes & Concepteur d'applications</div>
       <div class="py-2">
         <text class="text-lg">
-          En parcourant les pages de ce site, vous trouverez mon parcours professionnel complet, ainsi que mon parcours scolaire.
+          En parcourant les pages de ce site, vous découvrirez mon parcours professionnel complet.
           </text
         >
       </div>
@@ -34,14 +34,24 @@ const last_posts = posts.slice(0, 3);
     <HorizontalCard
       title="Technicien méthodes, Montauban (82)"
       img="/expliseat.webp"
-      desc="En 2018 j’intègre, en tant que Technicien méthodes, JVAeroservices, une PME montalbanaise qui fabrique des sièges pour l’aviation civile et militaire."
+      desc="En 2018, j'intègre les équipes de JVA, en tant que Technicien méthodes, ou je conçois, notamment, l'ensemble des gammes de travail pour les différents chantiers du site (Airbus, Dassault, Immarsat, etc...)" 
       badge="JVAeroservices"
     />
+    
+    <div class="divider my-0"></div>
+    <HorizontalCard
+    title="Préparateur Technique programme A320, Site Airbus Toulouse"
+    img="/A320cargo.jpg"
+    desc="En 2021 j’intègre le programme A320 par le poste de Préparateur Cabine A320. Je m'occupe alors d'appliquer les modifications de définition donnée par le Bureau d'Etudes sur la Partie commerciale des soutes (planchers, rollertrack, filets, etc...)"
+    badge="EXPLEO"
+    
+    />
+
     <div class="divider my-0"></div>
     <HorizontalCard
     title="Coordinateur Technique programme A350, Site Airbus Toulouse"
     img="/A350.jpg"
-    desc="En 2014 j’intègre le programme A350 pour participer au lancement de celui-ci en tant que coordinateur technique pour le détachement du site Saint Nazaire."
+    desc="En 2014 j’intègre le programme A350 pour participer au lancement de celui-ci en tant que coordinateur technique pour le détachement du site Saint Nazaire. Mon rôle sera alors de veiller à la bonne application des travaux restants, en coordonnant les differents services du détachement."
     badge="AAA"
 
   />
@@ -49,7 +59,7 @@ const last_posts = posts.slice(0, 3);
     <HorizontalCard
     title="Support Technique REC (Rework Electrical Center) programme A380, Site Airbus Toulouse"
     img="/a380 face.jpg"
-    desc="En 2004 j’intègre le site Jean Luc Lagardère de Blagnac, pour prendre part au lancement de l’A380."
+    desc="En 2004 j’intègre le site Jean Luc Lagardère de Blagnac, pour prendre part au lancement du programme A380. Je traite les Non Conformités et assiste la production au sein du service de Rattrapages Electriques qui à la responsabilité de l'ensemble des harnais de cet avion"
     badge="AAA"
     
   />
