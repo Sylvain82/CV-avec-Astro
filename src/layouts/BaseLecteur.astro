@@ -8,7 +8,7 @@
 
         <div class="buttons">
             <button id="play-pause">
-                <img src="play.svg" />
+                <img src="../play.svg" />
             </button>
             <button id="mute">Mute</button>
             <input
@@ -20,7 +20,7 @@
                 step="1"
             />
             <button id="fullscreen">
-                <img src="fullscreen.svg" />
+                <img src="../fullscreen.svg" />
             </button>
         </div>
     </div>
@@ -40,10 +40,10 @@
     
     function togglePlayPause() {
         if (video.paused) {
-            img.src = "pause.svg";
+            img.src = "../pause.svg";
             video.play();
         } else {
-            img.src = "play.svg";
+            img.src = "../play.svg";
             video.pause();
         }
     }
@@ -57,7 +57,7 @@
         juice.style.width = juicePos * 100 + "%";
     
         if (video.ended) {
-            img.src = "play.svg";
+            img.src = "../play.svg";
         }
     });
     
