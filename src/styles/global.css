@@ -235,6 +235,7 @@ body {
 .video {
   width: 100%;
 }
+
 .controls {
   display: flex;
   position: absolute;
@@ -288,4 +289,18 @@ body {
 }
 #fullscreen img {
   width: 20px;
+}
+
+/* Media Queries Lecteur video*/
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  .container-video {
+    justify-content: center;
+    width: 600px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container-video {
+    width: 300px;
+  }
 }
