@@ -1,306 +1,156 @@
-.time-line-container>div:last-child .education__time>.education__line {
-    display: none;
-}
+/* @imports must come first */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-@import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-
+/* ==========================================
+   Base
+   ========================================== */
 html {
   scroll-behavior: smooth;
 }
 
-/* Override UGG site */
-#main {
-  width: 100%;
-  padding: 0;
-}
-.content-asset p {
-  margin: 0 auto;
-}
-.breadcrumb {
+/* ==========================================
+   Timeline
+   ========================================== */
+.time-line-container > div:last-child .education__time > .education__line {
   display: none;
 }
 
-/* Helpers */
-/**************************/
-.margin-top-10 {
-  padding-top: 10px;
-}
-.margin-bot-10 {
-  padding-bottom: 10px;
+/* ==========================================
+   Parallax — variables
+   ========================================== */
+:root {
+  --parallax-font-heading: "Oswald", sans-serif;
+  --parallax-font-body: "Source Sans 3", sans-serif;
 }
 
-/* Parallax */
-/**************************/
+/* ==========================================
+   Parallax — typography
+   ========================================== */
 #parallax-world-of-ugg h1 {
-  font-family: "Oswald", sans-serif;
-  font-size: 24px;
+  font-family: var(--parallax-font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 400;
   text-transform: uppercase;
-  color: black;
-  padding: 0;
+  color: #000;
   margin: 0;
 }
+
 #parallax-world-of-ugg h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 70px;
-  letter-spacing: 10px;
+  font-family: var(--parallax-font-heading);
+  font-size: clamp(2rem, 8vw, 4.375rem);
+  letter-spacing: 0.5rem;
   text-align: center;
-  color: white;
+  color: #fff;
   font-weight: 400;
   text-transform: uppercase;
   z-index: 10;
   opacity: 0.9;
 }
+
 #parallax-world-of-ugg h3 {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 0;
+  font-family: var(--parallax-font-heading);
+  font-size: 0.875rem;
+  line-height: 1;
   font-weight: 400;
-  letter-spacing: 8px;
+  letter-spacing: 0.5rem;
   text-transform: uppercase;
-  color: black;
+  color: #000;
 }
+
 #parallax-world-of-ugg p {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--parallax-font-body);
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
+
 .first-character {
+  font-family: var(--parallax-font-body);
   font-weight: 400;
   float: left;
-  font-size: 84px;
-  line-height: 64px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-size: 5.25rem;
+  line-height: 4rem;
+  padding: 4px 8px 0 3px;
 }
 
-.sc {
-  color: #3b8595;
-}
-.ny {
-  color: #3d3c3a;
-}
-.atw {
-  color: #c48660;
-}
+.sc  { color: #3b8595; }
+.ny  { color: #3d3c3a; }
+.atw { color: #c48660; }
 
-/* Section - Title */
-/**************************/
+/* ==========================================
+   Parallax — layout sections
+   ========================================== */
 #parallax-world-of-ugg .title {
-  background: white;
-  padding: 60px;
+  background: #fff;
+  padding: clamp(2rem, 5vw, 3.75rem);
   margin: 0 auto;
   text-align: center;
 }
+
 #parallax-world-of-ugg .title h1 {
-  font-size: 35px;
-  letter-spacing: 8px;
+  font-size: clamp(1.5rem, 4vw, 2.1875rem);
+  letter-spacing: 0.5rem;
 }
 
-/* Section - Block */
-/**************************/
 #parallax-world-of-ugg .block {
-  background: white;
-  padding: 60px;
-  width: 820px;
+  background: #fff;
+  padding: clamp(1.5rem, 4vw, 3.75rem);
+  max-width: 820px;
   margin: 0 auto;
   text-align: justify;
 }
+
 #parallax-world-of-ugg .block-gray {
   background: #f2f2f2;
-  padding: 60px;
+  padding: clamp(1.5rem, 4vw, 3.75rem);
 }
+
 #parallax-world-of-ugg .section-overlay-mask {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
+  inset: 0;
+  background-color: #000;
   opacity: 0.7;
 }
 
-/* Section - Parallax */
-/**************************/
-#parallax-world-of-ugg .parallax-one {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1568548634530-38ee433dcc1b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-#parallax-world-of-ugg .parallax-two {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1500281847966-72ae943b08c6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1399&q=80);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-#parallax-world-of-ugg .parallax-three {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1588620661950-0362c9543f82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* Extras */
-/**************************/
 #parallax-world-of-ugg .line-break {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000;
   width: 150px;
   margin: 0 auto;
 }
 
-/* Media Queries */
-/**************************/
-@media screen and (max-width: 959px) and (min-width: 768px) {
-  #parallax-world-of-ugg .block {
-    padding: 40px;
-    width: 620px;
-  }
-}
-@media screen and (max-width: 767px) {
-  #parallax-world-of-ugg .block {
-    padding: 30px;
-    width: 420px;
-  }
-  #parallax-world-of-ugg h2 {
-    font-size: 30px;
-  }
-  #parallax-world-of-ugg .block {
-    padding: 30px;
-  }
-  #parallax-world-of-ugg .parallax-one,
-  #parallax-world-of-ugg .parallax-two,
-  #parallax-world-of-ugg .parallax-three {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-@media screen and (max-width: 479px) {
-  #parallax-world-of-ugg .block {
-    padding: 30px 15px;
-    width: 290px;
-  }
-}
-
-/* Lecteur video  */
-/* ********************* */
-
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  background: rgb(34,32,32);
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container-video {
-  width: 800px;
-  position: relative;
+/* ==========================================
+   Parallax — image sections (shared)
+   ========================================== */
+#parallax-world-of-ugg .parallax-one,
+#parallax-world-of-ugg .parallax-two,
+#parallax-world-of-ugg .parallax-three {
+  padding-block: clamp(6.25rem, 12vw, 12.5rem);
   overflow: hidden;
-}
-.video {
-  width: 100%;
-}
-
-.controls {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  flex-wrap: wrap;
-  background: rgba(0,0,0,0.7);
-  transform:translateY(90%);
-  transition: all 0.2s;
-}
-.container-video:hover .controls {
-  transform:translateY(0);
-}
-
-.buttons {
-  padding: 5px 10px 10px;
-}
-.buttons button {
-  background: none;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mute {
   position: relative;
-  top: -5px;
-  margin: 0 12px;
-}
-#play-pause img {
-  width: 30px;
-  position: relative;
-  top: 5px;
-}
-
-.barre-orange {
-  height: 10px;
   width: 100%;
-  background: #000;
-  cursor: pointer;
-}
-.juice {
-  height: 10px;
-  background-color: orangered;
-}
-#fullscreen {
-  position: absolute;
-  right: 15px;
-  top: 25px
-}
-#fullscreen img {
-  width: 20px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Media Queries Lecteur video*/
-/**************************/
-@media screen and (max-width: 959px) and (min-width: 768px) {
-  .container-video {
-    justify-content: center;
-    width: 600px;
-  }
+#parallax-world-of-ugg .parallax-one {
+  background-image: url("https://images.unsplash.com/photo-1568548634530-38ee433dcc1b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background-position: top center;
 }
-@media screen and (max-width: 767px) {
-  .container-video {
-    width: 300px;
-  }
+
+#parallax-world-of-ugg .parallax-two {
+  background-image: url("https://images.unsplash.com/photo-1500281847966-72ae943b08c6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1399&q=80");
+  background-position: center;
 }
+
+#parallax-world-of-ugg .parallax-three {
+  background-image: url("https://images.unsplash.com/photo-1588620661950-0362c9543f82?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80");
+  background-position: center;
+}
+
+/* ==========================================
+   Helpers (used in para.astro)
+   ========================================== */
+.margin-top-10 { padding-top: 0.625rem; }
+.margin-bot-10 { padding-bottom: 0.625rem; }
